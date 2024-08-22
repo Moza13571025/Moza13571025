@@ -1,86 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  position: relative;
-  background: rgba(180, 227, 187, 0.81);
-  height: 100vh; 
-}
-
-.slogan {
-  position: absolute;
-  top: 328px;
-  left: 17px;
-  width: 536px;
-}
-
-.text01 {
+nav {
   display: flex;
-  /* width: 394px; */
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.text02 {
-  display: flex;
-  /* width: 536px;
-  height: 29px; */
-  flex-direction: column;
-  align-items: flex-end;
-  flex-shrink: 0;
-}
-
-.text02 p {
-  color: #000;
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.brand {
-  /* width: 386px; */
-  height: 44px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  color: #000;
-  font-family: Inter;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  padding: 1rem;
 }
 
-.text06 {
+nav ul{
   display: flex;
-  width: 597px;
-  padding: 10px;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
+  margin-block: auto;/*  覆蓋Bootstrap框架預設的reboot.scss樣式*/
 }
 
-.keyView {
-  position: absolute;
-  top: 232px;
-  left: 553px;
-
-  width: 471px;
-  height: 315px;
-  flex-shrink: 0;
-  background: url(./image/keyView.jpg) lightgray 50% / cover no-repeat;
+nav li{
+  list-style-type: none;
+  margin-right: 1rem;/*使用相對單位增加響應度*/
+}
+nav li:not(:last-child){
+  list-style-type: none;
+  margin-right: 1rem;/*不讓最後一個<li>有右邊距*/
 }
 
-.avator {
-  width: 403px;
-  height: 523px;
-  flex-shrink: 0;
-  background: url(./image/avator.jpg) lightgray 50% / cover no-repeat;
+nav a{
+  text-decoration: none;
+  color:inherit;
 }
+
+/* .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+} */
+
+/* .social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+} */
