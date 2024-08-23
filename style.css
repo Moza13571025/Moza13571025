@@ -70,6 +70,20 @@ nav a {
   flex-shrink: 0;
 }
 
+.subtitle {
+  position: absolute;
+  top: 979px;
+  left: 87px;
+}
+
+.text-wrapper {
+  color: var(--Too-Light-Yellow, #f7f197);
+  font-family: Poppins;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 116px; /* 116% */
+}
 /* .image .unsplash {
     position: fixed;
     width: 493px;
