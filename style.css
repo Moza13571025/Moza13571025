@@ -36,8 +36,8 @@ nav a {
   flex-shrink: 0;
 
   position: absolute;
-  top:288px;
-  left:97px;
+  top: 288px;
+  left: 97px;
   /* position: absolute;
   top:80%;
   left:5%; */
@@ -60,3 +60,21 @@ nav a {
   font-weight: 500;
   line-height: normal;
 }
+
+.image {
+  position: absolute;
+  top: 174px;
+  left: 823px;
+  width: 506px;
+  height: 509px;
+  flex-shrink: 0;
+}
+
+/* .image .unsplash {
+    position: fixed;
+    width: 493px;
+    height: 532px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+} */
