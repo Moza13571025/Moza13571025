@@ -76,7 +76,7 @@ nav a {
   left: 87px;
 }
 
-.text-wrapper {
+.subtitle .text-wrapper {
   color: var(--Too-Light-Yellow, #f7f197);
   font-family: Poppins;
   font-size: 100px;
@@ -84,11 +84,61 @@ nav a {
   font-weight: 800;
   line-height: 116px; /* 116% */
 }
-/* .image .unsplash {
-    position: fixed;
-    width: 493px;
-    height: 532px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-} */
+.subtitle-info {
+  position: absolute;
+  top: 1127px;
+  left: 87px;
+  width: 900px;
+  height: 132px;
+}
+.subtitle-info .text-wrapper {
+  width: 900px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--dark-blue);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 44px;
+}
+.about-list {
+  position: absolute;
+  top: 1404px;
+  left: 374px;
+  width: 900px;
+  height: 132px;
+}
+.about-list li {
+  list-style: none;
+  position: relative;
+}
+.about-list li::before {
+  content: "༺";
+  position: absolute;
+  top: 0;
+  left: -2em;
+  font-size: 1.5em;
+}
+.about-list li:not(:last-child) {
+  margin-bottom: 2.9em; /* 調整下邊的間距 */
+}
+
+.about-list .year {
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--dark-blue);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+.about-list p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--dark-blue);
+  font-size: 24px;
+  letter-spacing: 0;
+}
