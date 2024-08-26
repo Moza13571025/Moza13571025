@@ -1,5 +1,5 @@
-body{
-  background: var(--Light-Yellow, #FBF8CC);
+body {
+  background: var(--Light-Yellow, #fbf8cc);
 }
 
 header {
@@ -27,7 +27,7 @@ nav li:not(:last-child) {
   margin-right: 1rem; /*不讓最後一個<li>有右邊距*/
 }
 
-nav a {
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -75,17 +75,17 @@ nav a {
 }
 
 .spacer {
-  height: 80vh;
+  height: 100vh;
 }
 
 .absolute-section {
-  height: 160vh;
+  height: 180vh;
 }
 
 .subtitle {
-  position: absolute;
+  /* position: absolute;
   top: 979px;
-  left: 87px;
+  left: 87px; */
 }
 
 .subtitle .text-wrapper {
@@ -97,11 +97,10 @@ nav a {
   line-height: 116px; /* 116% */
 }
 .subtitle-info {
-  position: absolute;
+  /* position: absolute;
   top: 1127px;
-  left: 87px;
+  left: 87px; */
   width: 900px;
-  height: 132px;
 }
 .subtitle-info .text-wrapper {
   width: 900px;
@@ -111,11 +110,19 @@ nav a {
   font-size: 24px;
   letter-spacing: 0;
   line-height: 44px;
+  text-align: justify;
 }
+
+.about-list-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5rem;
+}
+
 .about-list {
-  position: absolute;
+  /* position: absolute;
   top: 1404px;
-  left: 374px;
+  left: 374px; */
   width: 900px;
   height: 132px;
 }
@@ -153,6 +160,11 @@ nav a {
   color: var(--dark-blue);
   font-size: 24px;
   letter-spacing: 0;
+  text-align: justify;
+}
+
+br {
+  line-height: 2rem;
 }
 
 .grid-section {
@@ -232,11 +244,11 @@ figcaption {
   background: linear-gradient(0deg, #f5ee84 0%, #f5ee84 100%);
 }
 
-.contact-info{
+.contact-info {
   padding-left: 3rem;
 }
 
-.contact-info-wrap .contact-info{
+.contact-info-wrap .contact-info {
   color: #03045e;
   font-size: 24px;
   font-family: Poppins;
@@ -244,4 +256,9 @@ figcaption {
   line-height: 44px;
   word-wrap: break-word;
   margin-bottom: 0.7rem;
+}
+
+.contact-info a:hover {
+  font-style: italic;
+  text-decoration: underline;
 }
