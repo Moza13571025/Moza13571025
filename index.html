@@ -231,6 +231,7 @@
         </div>
       </div>
     </section>
+    <button id="topButton">TOP</button>
   </main>
   <footer>
     <!-- place footer here -->
@@ -243,6 +244,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
+
+    <script>
+      // 獲取按鈕元素
+        var topButton = document.getElementById("topButton");
+
+        // 當用戶滾動頁面時，如果滾動距離超過 20px，就顯示按鈕
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+          } else {
+            topButton.style.display = "none";
+          }
+        };
+
+        // 當用戶點擊按鈕時，滾動到頁面頂部
+        topButton.onclick = function () {
+          document.body.scrollTop = 0; // 對於 Safari
+          document.documentElement.scrollTop = 0; // 對於 Chrome, Firefox, IE 和 Opera
+        };
+    </script>
 </body>
 
 </html>
