@@ -267,6 +267,21 @@ figcaption {
   padding-inline: 1rem;
 }
 
+.present-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+/* 字體 */
+  color: #03045e;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 44px;
+  word-wrap: break-word;
+  margin-bottom: 0.7rem;
+  text-decoration: underline;
+}
+
 .contact-image {
   width: 100%;
   height: auto;
