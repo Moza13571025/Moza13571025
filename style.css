@@ -321,3 +321,20 @@ figcaption {
   border-radius: 50%;
   cursor: pointer;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* .footer-content .socials {
+  list-style-type: none;
+  padding: 0;
+} */
+
+/* .footer-content .socials li a {
+  color: #fff;
+  text-decoration: none;
+} */
