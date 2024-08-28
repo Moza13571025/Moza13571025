@@ -65,7 +65,7 @@ a {
   line-height: normal;
 }
 
-.image {
+.avatar {
   position: absolute;
   top: 174px;
   left: 823px;
@@ -338,3 +338,13 @@ footer {
   color: #fff;
   text-decoration: none;
 } */
+
+/* 動畫效果 */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
