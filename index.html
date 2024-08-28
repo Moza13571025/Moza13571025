@@ -51,12 +51,12 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-text">
-      <p>Hello, I'm Lee, Wei-Yang,</p>
-      <h1>Front-End Engineer</h1>
-      <p>based in Taiwan.</p>
+    <div class="hero-text slide-in-right">
+      <p class="fade-in">Hello, I'm Lee, Wei-Yang,</p>
+      <h1 class="fade-in">Front-End Engineer</h1>
+      <p class="fade-in">based in Taiwan.</p>
       <a href="#resume">
-        <div style="position: relative">
+        <div class="fade-in" style="position: relative">
           <div
             style="width: 158px; height: 61px; left: 6px; top: 7px; position: absolute; background: #F5EE84; border-radius: 6px">
           </div>
@@ -97,7 +97,7 @@
       <div class="row about-list-wrap">
         <div class="col-8">
           <ul class="about-list">
-            <li>
+            <li class="fade-in slide-in">
               <p class="year">2024-</p>
               <p>
                 我自費參加資展國際前端工程師就業養成班培訓，累積近600小時學習及實作經驗，以React和Node.js和團隊夥伴完成『具有以日期預約露營地功能』的野放露營預約平台；並以PHP和MySQL完成後台管理系統。<br>
@@ -115,7 +115,7 @@
                 communication and
                 collaborative learning.</p>
             </li>
-            <li>
+            <li class="slide-in fade-in">
               <p class="year">2020-2024</p>
               <p>
                 我任職於中央健康保險署--連續多年榮獲政府服務品質獎第一名--南區業務組，從事總務、採購工作，任職期間成為科室第一位連續3年考績甲等的新進同仁，甚至支援資訊安全內控作業，並擔任資安種子講師；離職前也建立大樓管理的SOP文件，順利交接。
@@ -130,7 +130,7 @@
                 leaving, I
                 established the building management SOP documents for a smooth handover.</p>
             </li>
-            <li>
+            <li class="slide-in fade-in">
               <p class="year">2015-2020</p>
               <p>我在體制外德育學校擔任公民教師兼班群導師，期間和同儕一起組織學生從事服務活動，包含：社區關懷老人服務、救援300隻小鴨、迎接3000人次的校園懇親服務、到國家音樂廳演出。</p>
               <p>I served as a civics teacher and homeroom mentor at a non-traditional moral education school, where I
@@ -168,7 +168,7 @@
       <!-- cards -->
       <div class="row">
         <div class="col-6">
-          <div class="card">
+          <div class="card fade-in">
             <div class="thumbnail">
               <figure>
                 <img src="./image/yeahFun01.webp" />
@@ -190,7 +190,7 @@
           </div>
         </div>
         <div class="col-6">
-          <div class="card">
+          <div class="card fade-in">
             <div class="thumbnail">
               <figure>
                 <img src="./image/admin-systom03.webp" />
@@ -218,23 +218,23 @@
       </div>
       <div class="row">
         <div class="col-4">
-          <img class="contact-image" src="./image/contact.jpg" />
+          <img class="contact-image fade-in" src="./image/contact.jpg" />
         </div>
         <div class="col-8">
-          <div class="contact-info-wrap">
-            <div class="contact-info fade-in">對我的作品感興趣？歡迎聯繫我面試或商業合作，並關注我的技術部落格！<br>Interested in my work? Contact me for
+          <div class="contact-info-wrap slide-up">
+            <div class="contact-info">對我的作品感興趣？歡迎聯繫我面試或商業合作，並關注我的技術部落格！<br>Interested in my work? Contact me for
               interviews or business opportunities. Check out my technical blog and feel free to
               follow!</div>
-            <p class="contact-info fade-in">
+            <p class="contact-info">
               <a href="mailto:mimifaso@gmail.com">Send me an email</a>
               <i class="fa-solid fa-arrow-pointer fa-beat"></i>
             </p>
-            <p class="contact-info fade-in">My Tech Blog:
+            <p class="contact-info">My Tech Blog:
               <a href="https://moza-tech.blogspot.com/">Mr.抹茶的技術部落格
                 <i class="fa-solid fa-arrow-pointer fa-beat"></i>
               </a>
             </p>
-            <p class="contact-info fade-in">
+            <p class="contact-info">
               <a href="https://www.threads.net/@kirin_0928" target="_blank">Follow me on Threads：每天一篇工作文直到轉職成功</a>
               <i class="fa-solid fa-arrow-pointer fa-beat"></i>
             </p>
@@ -265,7 +265,7 @@
     crossorigin="anonymous"></script>
 
   <script>
-    //大頭貼淡入效果
+    //淡入效果
     document.addEventListener("DOMContentLoaded", function () {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -281,7 +281,6 @@
         observer.observe(element);
       });
     });
-
     // 獲取按鈕元素
     var topButton = document.getElementById("topButton");
     // 當用戶滾動頁面時，如果滾動距離超過 20px，就顯示按鈕
@@ -297,6 +296,59 @@
       document.body.scrollTop = 0; // 對於 Safari
       document.documentElement.scrollTop = 0; // 對於 Chrome, Firefox, IE 和 Opera
     };
+    // 向左滑入效果
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // observer.unobserve(entry.target); 
+            // 在元素已經滑入後停止觀察
+          }
+        });
+      }, { threshold: [0.1] }); // 使用多個閾值確保較早觸發
+
+      const elements = document.querySelectorAll('.slide-in');
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    // 向上滑入效果
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // observer.unobserve(entry.target); 
+            // 在元素已經滑入後停止觀察
+          }
+        });
+      }, { threshold: [0.1, 0.5] }); // 使用多個閾值確保較早觸發
+
+      const elements = document.querySelectorAll('.slide-up');
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    // 向右滑入效果
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // observer.unobserve(entry.target); 
+            // 在元素已經滑入後停止觀察
+          }
+        });
+      }, { threshold: [0.1, 0.5] }); // 使用多個閾值確保較早觸發
+
+      const elements = document.querySelectorAll('.slide-in-right');
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
   </script>
 </body>
 
