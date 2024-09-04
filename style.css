@@ -6,6 +6,10 @@ header {
   position: relative;
 }
 
+.hamburger {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -380,3 +384,16 @@ footer {
   transform: translateX(0);
   /* opacity: 1; */
 }
+
+@media (max-width: 767px) {
+  /* 手機樣式 */
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+}
+
