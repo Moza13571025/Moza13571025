@@ -387,13 +387,16 @@ footer {
 
 @media (max-width: 767px) {
   /* 手機樣式 */
-  /* nav {
+  nav {
     display: none;
   }
 
   .hamburger {
     display: block;
-  } */
+    font-size: 50px;
+    text-align: right;
+
+  }
 
 }
 
