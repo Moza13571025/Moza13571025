@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //手機版RWD：hamburger按鈕功能--切換nav元素顯示狀態
 document.querySelector(".hamburger").addEventListener("click", function () {
-  var nav = document.querySelector("nav");
-  if (nav.style.display === "none") {
-    nav.style.display = "block";
+  var navMenu = document.querySelector(".nav-menu");
+  if (navMenu.style.display === "none") {
+    navMenu.style.display = "block";
   } else {
-    nav.style.display = "none";
+    navMenu.style.display = "none";
   }
 });

@@ -387,7 +387,7 @@ footer {
 
 @media (max-width: 767px) {
   /* 手機樣式 */
-  nav {
+  .nav-menu {
     display: none;
   }
 
